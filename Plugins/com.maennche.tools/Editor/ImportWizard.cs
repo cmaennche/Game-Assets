@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using UnityEditor;
@@ -32,7 +33,10 @@ namespace cmaennche {
             if (GUILayout.Button("Import")) {
                 using (var client = new WebClient())
                 {
-                    client.DownloadFile("https://github.com/cmaennche/Game-Assets/archive/FPSController-Basic.unitypackage", Path.Combine(Application.dataPath, "FPSController.unitypackage"));
+                    client.DownloadFile("https://github.com/cmaennche/Game-Assets/blob/main/Packages/Custom/basicFpsController.unitypackage?raw=true", Path.Combine(Application.dataPath, "FPSController.unitypackage"));
+                    AssetDatabase.Refresh();
+                    Process.Start(Path.Combine(Application.dataPath, "FPSController.unitypackage"));
+                    // File.Delete(Path.Combine(Application.dataPath, "FPSController.unitypackage"));
                 }
             }
             GUILayout.EndHorizontal();
