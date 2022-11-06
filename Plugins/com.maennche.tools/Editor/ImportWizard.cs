@@ -30,16 +30,9 @@ namespace cmaennche {
             GUILayout.BeginHorizontal();
             EditorGUILayout.PrefixLabel("Basic FPS Controller");
             if (GUILayout.Button("Import")) {
-                string githubToken = "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";
-                var url = "https://github.com/cmaennche/Game-Assets/archive/FPSController-Basic.unitypackage";
-                var path = Path.Combine(Application.dataPath, "FPSController.unitypackage");
-                
-                using (var client = new System.Net.Http.HttpClient()) {
-                    var credentials = string.Format(System.Globalization.CultureInfo.InvariantCulture, "{0}:", githubToken);
-                    credentials = Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(credentials));
-                    client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", credentials);
-                    var contents = client.GetByteArrayAsync(url).Result;
-                    System.IO.File.WriteAllBytes(path, contents);
+                using (var client = new WebClient())
+                {
+                    client.DownloadFile("https://github.com/cmaennche/Game-Assets/archive/FPSController-Basic.unitypackage", Path.Combine(Application.dataPath, "FPSController.unitypackage"));
                 }
             }
             GUILayout.EndHorizontal();
