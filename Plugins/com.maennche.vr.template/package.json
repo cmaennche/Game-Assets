@@ -1,0 +1,27 @@
+{
+  "name": "com.maennche.vr.template",
+  "version": "1.0.0",
+  "displayName": "Maennche VR Template",
+  "description": "This is a custom vr template made by Christopher Maennche.",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "documentationUrl": "",
+  "changelogUrl": "",
+  "licensesUrl": "",
+  "dependencies": {
+    "com.unity.inputsystem": "1.4.3",
+    "com.unity.xr.management": "4.2.1",
+    "com.unity.xr.openxr": "1.4.2",
+    "com.unity.xr.oculus": "3.0.2",
+    "com.unity.xr.interaction.toolkit": "2.0.4",
+    "com.unity.textmeshpro": "3.0.6",
+    "com.unity.probuilder": "5.0.6"
+ },
+ "samples": [],
+ "keywords": [],
+  "author": {
+    "name": "Christopher Maennche",
+    "email": "Christopher@Maennche.com",
+    "url": "https://www.Maennche.com"
+  }
+}
