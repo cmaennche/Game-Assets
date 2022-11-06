@@ -6,7 +6,7 @@ using static UnityEditor.AssetDatabase;
 using static System.IO.Directory;
 using static System.IO.Path;
 
-namespace cmaennche {
+namespace maennche {
     public class SetupWizard : EditorWindow {
         public string projectName = "";
         public string authorName = "";

@@ -5,7 +5,7 @@ using System.Net;
 using UnityEditor;
 using UnityEngine;
 
-namespace cmaennche {
+namespace maennche {
     public class ImportWizard : EditorWindow {
         [MenuItem("Tools/Maennche/Import Wizard")]
         private static void ShowWindow() {
